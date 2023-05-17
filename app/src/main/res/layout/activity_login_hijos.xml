@@ -37,7 +37,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de Usuario"
+                android:text="Correo"
                 android:textSize="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
@@ -45,11 +45,11 @@
         <EditText
                 android:layout_width="220dp"
                 android:layout_height="50dp"
-                android:hint="Usuario"
+                android:hint="Correo"
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
-        />
+                android:id="@+id/CorreoHijoLogin"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
-        />
+                android:id="@+id/ContraHijoLogin"/>
     </LinearLayout>
     <Button android:layout_width="220dp"
             android:layout_height="50dp"
@@ -73,14 +73,6 @@
             android:backgroundTint="@color/black"
             android:text="Inicia Sesion"
             android:layout_gravity="center"
-            android:onClick="mandarSesion"
-    />
-    <Button android:layout_width="220dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/black"
-            android:text="Crear Cuenta"
-            android:layout_gravity="center"
-            android:onClick="mandarSesion"
+            android:onClick="IniciarSesion"
     />
 </LinearLayout>

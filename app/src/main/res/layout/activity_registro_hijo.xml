@@ -37,7 +37,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de Usuario"
+            android:text="Correo"
             android:textSize="10dp"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-light"
@@ -45,11 +45,11 @@
     <EditText
             android:layout_width="220dp"
             android:layout_height="50dp"
-            android:hint="Usuario"
+            android:hint="Correo"
             android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-light"
-    />
+            android:id="@+id/CorreoHijo"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-light"
-    />
+            android:id="@+id/ContraHijo"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
             android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-light"
-    />
+            android:id="@+id/ContraSeguraHijo"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-light"
-    />
+            android:id="@+id/Codigo"/>
 
 
   </LinearLayout>
@@ -107,7 +107,7 @@
           android:backgroundTint="@color/black"
           android:text="Registrar"
           android:layout_gravity="center"
-          android:onClick="mandarSesion"
+          android:onClick="Registrar"
   />
 
 </LinearLayout>

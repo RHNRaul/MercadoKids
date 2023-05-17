@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp" android:layout_weight="1">
+
+
+    <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_width="236dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/mustang"
+                android:id="@+id/Imagen"
+                android:layout_weight="1"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="240dp"
+                android:layout_height="200dp
+">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textTitulo" android:textSize="24sp"
+            />
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp" android:id="@+id/textDescripcion" android:textSize="20sp"
+            />
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp" android:id="@+id/textPrecio" android:textSize="34sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

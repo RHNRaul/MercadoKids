@@ -17,7 +17,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/merca"
-            android:id="@+id/imageView9"
+
     />
 
 
@@ -37,15 +37,16 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de Usuario"
+                android:text="Correo Electronico"
                 android:textSize="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
         />
         <EditText
+                android:id="@+id/CorreoLogi"
                 android:layout_width="220dp"
                 android:layout_height="50dp"
-                android:hint="Usuario"
+                android:hint="Correo"
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
@@ -53,12 +54,13 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crear Contraseña"
+                android:text="Contraseña"
                 android:textSize="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-light"
         />
         <EditText
+                android:id="@+id/ContraLogi"
                 android:layout_width="220dp"
                 android:layout_height="50dp"
                 android:hint="Cotraseña"
@@ -73,7 +75,7 @@
             android:backgroundTint="@color/black"
             android:text="Inicia Sesion"
             android:layout_gravity="center"
-            android:onClick="mandarSesion"
+            android:onClick="IniciarSesion"
     />
     <Button android:layout_width="220dp"
             android:layout_height="50dp"
@@ -81,6 +83,6 @@
             android:backgroundTint="@color/black"
             android:text="Crear Cuenta"
             android:layout_gravity="center"
-            android:onClick="mandarSesion"
+            android:onClick="CrearRegistro"
     />
 </LinearLayout>
