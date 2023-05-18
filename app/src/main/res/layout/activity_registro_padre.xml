@@ -4,19 +4,27 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="@color/fondo"
+        android:background="@drawable/fondo_verde"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:windowSoftInputMode="adjustResize"
         tools:context=".RegistroPadre">
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="97dp"
+        android:layout_height="41dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/logo" />
+
 
     <ImageView
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="0dp"
             android:layout_width="102dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/merca"
+            app:srcCompat="@drawable/padre"
             android:id="@+id/imageView9"
     />
 
@@ -26,21 +34,23 @@
             android:layout_marginLeft="60dp"
             android:orientation="vertical"
             android:layout_width="300dp"
-            android:layout_height="500dp">
+            android:layout_height="450dp">
         <TextView
                 android:layout_gravity="center"
-                android:layout_width="110dp"
-                android:layout_height="20dp"
-                android:text="Dime quien eres"
-                android:textColor="@color/black"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:text="Raistro padre"
+            android:textSize="25dp"
+            android:textColor="#F9E925"
+            android:fontFamily="sans-serif-medium"
         />
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Correo Electronico"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Correo Electronico:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
                 android:layout_width="220dp"
@@ -53,10 +63,10 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crear Contraseña"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Crear Contraseña:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
 
@@ -71,10 +81,10 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirmar Contraseña"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Confirmar Contraseña:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
                 android:layout_width="220dp"
@@ -88,10 +98,10 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Nombre:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
                 android:layout_width="220dp"
@@ -105,10 +115,10 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido Paterno"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Apellido Paterno:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
                 android:layout_width="220dp"
@@ -122,10 +132,10 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido Materno"
-                android:textSize="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="sans-serif-light"
+                android:text="Apellido Materno:"
+                android:textSize="13dp"
+                android:textColor="#F9E925"
+                android:fontFamily="sans-serif-medium"
         />
         <EditText
                 android:layout_width="220dp"
