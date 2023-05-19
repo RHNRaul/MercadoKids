@@ -1,6 +1,8 @@
 package app.babyfeed.mercadokids;
 
+import DAO.CarritosDAO;
 import DAO.HijoDAO;
+import DTO.CarritosDTO;
 import DTO.HijoDTO;
 import android.view.View;
 import android.widget.EditText;
@@ -80,7 +82,13 @@ public class RegistroHijo extends AppCompatActivity implements Serializable {
         return 0;
     }
 
-
+    private void crearCarrito(HijoDAO nino){
+        CarritosDAO carrito = new CarritosDAO();
+        CarritosDTO baseDTO = new CarritosDTO(this); //Lo Usare para poder pasarme el registro del Carrito.
+        Toast.makeText(this,"Codigo paternal"+nino.getCodigoPateron(),Toast.LENGTH_LONG).show();
+        carrito.setCodigoparental(nino.getCodigoPateron());
+        baseDTO.CrearCarrito(carrito);
+    }
 
     public void Registrar(View view){
 
@@ -92,6 +100,7 @@ public class RegistroHijo extends AppCompatActivity implements Serializable {
                 HijoDTO DBHIJO = new HijoDTO(this);
                 if(DBHIJO.registrarse(hijo) == 0){
                     Toast.makeText(this,"Registro Exitoso",Toast.LENGTH_LONG).show();
+                    //crearCarrito(hijo);
                     finish();
                 }
                 else {

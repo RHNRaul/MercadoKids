@@ -1,5 +1,6 @@
 package app.babyfeed.mercadokids;
 
+import DAO.HijoDAO;
 import DAO.ProductoDAO;
 import android.content.Intent;
 import android.view.View;
@@ -10,14 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
-public class PrimerLista extends AppCompatActivity {
-RecyclerView RV2;
+import java.io.Serializable;
 
+public class PrimerLista extends AppCompatActivity implements Serializable {
+RecyclerView RV2;
+HijoDAO hijo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primer_lista);
-
+        hijo = (HijoDAO) getIntent().getExtras().getSerializable("Hijo");
        init();
     }
 
@@ -35,6 +38,7 @@ public void init(){
 void Ventanita(ProductoDAO pro){
         Intent ventana = new Intent(this, Descripcion.class);
         ventana.putExtra("Producto",pro);
+        ventana.putExtra("Hijo",hijo);
         startActivity(ventana);
     }
 

@@ -104,6 +104,7 @@ public class tarjetas extends RecyclerView.Adapter<tarjetas.tarjetasholder> {
            EV1 = itemView.findViewById(R.id.Imagen);
        }
 
+
        void bindData(final ProductoDAO productoDAO){
            int imagen = productoDAO.getImagen();
            String titulo = productoDAO.getNombre();

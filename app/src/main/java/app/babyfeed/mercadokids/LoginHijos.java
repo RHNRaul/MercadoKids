@@ -12,7 +12,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoginHijos extends AppCompatActivity {
+import java.io.Serializable;
+
+public class LoginHijos extends AppCompatActivity implements Serializable {
     private String nom,contra;
     private EditText et1,et2;
 
@@ -59,6 +61,9 @@ public class LoginHijos extends AppCompatActivity {
 
                     Toast.makeText(this,"Sesion iniciada",Toast.LENGTH_LONG).show();
                     Intent iniciar = new Intent(this, PrimerLista.class);
+                    int direccion = temp.getColumnIndex("codigopaternal");
+                    child.setCodigoPateron(temp.getString(direccion));
+                    iniciar.putExtra("Hijo",child);
                     startActivity(iniciar);
                 }
                 else {

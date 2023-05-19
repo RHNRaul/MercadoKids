@@ -1,5 +1,6 @@
 package DTO;
 
+import DAO.ProductoDAO;
 import DataBase.DBHELPER;
 import android.content.Context;
 import android.database.Cursor;
@@ -17,6 +18,37 @@ public class ProductoDTO {
         contexto=context;
         db = new DBHELPER(contexto);
         database = db.getWritableDatabase();
+    }
+
+    public Cursor Producto(int idproducto){
+        //Crear un Metodo ell cual me haga la consulta de un producto especifico haciendo que me regrese el ID unicamente
+        String id = String.valueOf(idproducto);
+        String consulta = "Select ID from "+DBHELPER.TABLA_PRODUCTOS+" WHERE ID = ?";
+        Cursor cursor = null;
+        try {
+            cursor = database.rawQuery(consulta, new String[] {id});
+            Toast.makeText(contexto, "Consulta exitosa", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(contexto, "Consulta no exitosa: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+        return cursor;
+
+    }
+
+
+    public Cursor Producto(ProductoDAO producto){
+        //Crear un Metodo ell cual me haga la consulta de un producto especifico haciendo que me regrese el ID unicamente
+        String nombre = producto.getNombre();
+        String consulta = "Select ID from "+DBHELPER.TABLA_PRODUCTOS+" WHERE Nombre = ?";
+        Cursor cursor = null;
+        try {
+            cursor = database.rawQuery(consulta, new String[] {nombre});
+            Toast.makeText(contexto, "Consulta exitosa", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(contexto, "Consulta no exitosa: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+        return cursor;
+
     }
 
     public Cursor consulta() {

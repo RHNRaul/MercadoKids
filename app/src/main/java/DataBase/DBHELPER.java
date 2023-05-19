@@ -21,6 +21,8 @@ public class DBHELPER  extends SQLiteOpenHelper {
     public static final String TABLA_CARRITO = "carrito";
     
     public static final String TABLA_PROLIST = "listaproductos";
+
+    public static final String TABLA_LISTADO = "listadeproductos";
    public DBHELPER(Context context){
        super(context,DATABASE_NOMBRE,null,DATABASE_VERSION);
 
@@ -34,8 +36,8 @@ public class DBHELPER  extends SQLiteOpenHelper {
        
        String crearbdcarripro = "CREATE TABLE IF NOT EXISTS "+TABLA_PROLIST+ "(" +
                "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-               "producto_id INTEGER NOT NULL," +
-               "carrito_id INTEGER NOT NULL)";
+               "producto INTEGER NOT NULL," +
+               "carrito INTEGER NOT NULL)";
 
        String crearbdproductos = "CREATE TABLE IF NOT EXISTS "+TABLA_PRODUCTOS+"(" +
                "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -60,7 +62,14 @@ public class DBHELPER  extends SQLiteOpenHelper {
                 "    codigopaternal TEXT NOT NULL\n" +
                 ")";
 
+        String crearbdlistados = "CREATE TABLE IF NOT EXISTS " + TABLA_LISTADO + "(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "Nombre TEXT UNIQUE NOT NULL, " +
+                "Precio INTEGER NOT NULL, " +
+                "Descripcion TEXT NOT NULL, " +
+                "codigopaternal TEXT NOT NULL)";
 
+        sqLiteDatabase.execSQL(crearbdlistados);
 
 
 

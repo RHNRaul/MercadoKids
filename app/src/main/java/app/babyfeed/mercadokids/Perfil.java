@@ -27,9 +27,16 @@ private PadreDAO padre;
    public void CrearHijo(View view){
         Intent ventana  = new Intent(this, RegistroHijo.class);
         ventana.putExtra("codigo",padre.getCodigoarental());
+        ventana.putExtra("codigopa",padre.getNom());
         startActivity(ventana);
    }
 
+   public void carrito(View view){
+    Intent ventana = new Intent(this,Carrito.class);
+    ventana.putExtra("papa",padre);
+    startActivity(ventana);
+
+   }
 
    public void CerrarSesion(View view){
         finish();
